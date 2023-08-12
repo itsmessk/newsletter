@@ -4,11 +4,6 @@ require 'vendor/autoload.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 
-$host = 'your_db_host';
-$db_user = 'your_db_user';
-$db_pass = 'your_db_password';
-$db_name = 'your_db_name';
-
 $connection = new mysqli('localhost', 'root', '', 'email' );
 
 if ($connection->connect_error) {
@@ -27,8 +22,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $mail->isSMTP();
   $mail->Host = 'smtp-relay.brevo.com'; // Your SMTP server's hostname
   $mail->SMTPAuth = true;
-  $mail->Username = 'panimalaralumni@yahoo.com'; // Your SMTP username
-  $mail->Password = 'QWabjyI3wx4K9R8p'; // Your SMTP password // Your SMTP password
+  $mail->Username = ''; // Your SMTP username
+  $mail->Password = ''; // Your SMTP password // Your SMTP password
   $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // or ENCRYPTION_SMTPS for SSL
   $mail->Port = 587; // or 465 for SSL
 
