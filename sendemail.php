@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   while ($row = $result->fetch_assoc()) {
     $to = $row["email"];
 
-    $mail->setFrom('alumni@panimalar.ac.in', 'Panimalar Alumni Association');
+    $mail->setFrom('alumni@panimalar.ac.in', 'Panimalar Alumni Association`');
     $mail->addAddress($to);
     $mail->Subject = $subject;
     $mail->Body = $message;
