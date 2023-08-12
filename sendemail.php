@@ -27,15 +27,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $mail->isSMTP();
   $mail->Host = 'smtp-relay.brevo.com'; // Your SMTP server's hostname
   $mail->SMTPAuth = true;
-  $mail->Username = 'panimalaralumni@yahoo.com'; // Your SMTP username
-  $mail->Password = 'QWabjyI3wx4K9R8p'; // Your SMTP password // Your SMTP password
+  $mail->Username = ''; // Your SMTP username
+  $mail->Password = ''; // Your SMTP password // Your SMTP password
   $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // or ENCRYPTION_SMTPS for SSL
   $mail->Port = 587; // or 465 for SSL
 
   while ($row = $result->fetch_assoc()) {
     $to = $row["email"];
 
-    $mail->setFrom('alumni@panimalar.ac.in', 'Panimalar Alumni Association');
+    $mail->setFrom('alumni@panimalar.ac.in', 'Panimalar Alumni Association`');
     $mail->addAddress($to);
     $mail->Subject = $subject;
     $mail->Body = $message;
